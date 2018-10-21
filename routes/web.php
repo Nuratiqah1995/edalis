@@ -34,3 +34,7 @@ Route::resource('/sales-info', 'SalesInfoController')->middleware('auth');
 Route::resource('entrepreneur-info', 'EntrepreneurProfileController')->middleware('auth');
 Route::resource('entrepreneur-business', 'EntrepreneurBusinessController')->middleware('auth');
 Route::resource('entrepreneur-sales', 'EntrepreneurSalesController')->middleware('auth');
+
+Route::get('top-weekly', 'EntrepreneurSalesController@topWeekly')->name('top-weekly')->middleware('auth');
+Route::get('top-monthly', 'EntrepreneurSalesController@topMonthly')->name('top-monthly')->middleware('auth');
+Route::get('top-yearly', 'EntrepreneurSalesController@topYearly')->name('top-yearly')->middleware('auth');

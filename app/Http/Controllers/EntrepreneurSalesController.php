@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\BusinessInfo;
+use App\SalesInfo;
 use Illuminate\Http\Request;
 
-class EntrepreneurBusinessController extends Controller
+class EntrepreneurSalesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,12 @@ class EntrepreneurBusinessController extends Controller
      */
     public function index()
     {
-        $businesses = BusinessInfo::paginate(35);
+        $sales = SalesInfo::paginate(35);
 
-        return view('entrepreneur_business.index')->with([
-            'businesses' => $businesses,
+        return view('entrepreneur_sales.index')->with([
+            'sales' => $sales,
         ]);
+
     }
 
     /**
@@ -28,7 +29,7 @@ class EntrepreneurBusinessController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -42,6 +43,33 @@ class EntrepreneurBusinessController extends Controller
         //
     }
 
+    public function topWeekly()
+    {
+        $sales = SalesInfo::orderBy('sales', 'DESC')->limit(5)->get();
+
+        return view('entrepreneur_sales.top')->with([
+            'sales' => $sales,
+        ]);
+    }
+
+    public function topMonthly()
+    {
+        $sales = SalesInfo::orderBy('sales', 'DESC')->limit(5)->get();
+
+        return view('entrepreneur_sales.top')->with([
+            'sales' => $sales,
+        ]);
+    }
+
+    public function topYearly()
+    {
+        $sales = SalesInfo::orderBy('sales', 'DESC')->limit(5)->get();
+
+        return view('entrepreneur_sales.top')->with([
+            'sales' => $sales,
+        ]);
+    }
+
     /**
      * Display the specified resource.
      *
@@ -50,11 +78,7 @@ class EntrepreneurBusinessController extends Controller
      */
     public function show($id)
     {
-        $business = BusinessInfo::find($id);
-
-        return view('entrepreneur_business.view')->with([
-            'business' => $business,
-        ]);
+        $sale = SaleInfo::find($id);
     }
 
     /**

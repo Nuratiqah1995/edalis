@@ -7,7 +7,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Entrepreneur Business</h3>
+                <h3 class="card-title">Sales Info</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -16,7 +16,7 @@
                     <!-- <div class="input-group-append">
                       <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                     </div> -->
-					{{ $businesses->links() }}
+					{{ $sales->links() }}
                   </div>
                 </div>
               </div>
@@ -26,18 +26,20 @@
                   <tr>
 					<th>Owner</th>
                     <th>Company Name</th>
-                    <th>Registration Number</th>
-                    <th>Business Type</th>
+                    <th>Modal</th>
+                    <th>Sales</th>
+                    <th>Submitted Date</th>
                     <th>Action</th>
                   </tr>
-				  @foreach($businesses as $business)
+				  @foreach($sales as $sale)
                   <tr>
-					<td>{{ $business->user->name }}</td>
-                    <td>{{ $business->company_name }}</td>
-                    <td>{{ $business->registration_no }}</td>
-                    <td>{{ $business->business_type }}</td>
+					<td>{{ @$sale->user->name }}</td>
+                    <td>{{ @$sale->user->business->company_name }}</td>
+                    <td>MYR {{ number_format((float)@$sale->modal, 2, '.', '') }}</td>
+                    <td>MYR {{ number_format((float)@$sale->sales, 2, '.', '') }}</td>
+                    <td>{{ @$sale->created_at->toDateString() }}</td>
                     <td>
-						<a href="{{route('entrepreneur-business.show', ['entrepreneur_business' => $business->id])}}">View Business</a>
+						<a href="{{route('entrepreneur-info.show', ['entrepreneur_info' => $sale->id])}}">View Sales Info</a>
 					</td>
                   </tr>
 				  @endforeach

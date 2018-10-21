@@ -31,15 +31,21 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+                <a href="{{route('top-weekly')}}" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Weeks</p>
+                  <p>Weekly</p>
+                </a>
+              </li>
+			  <li class="nav-item">
+                <a href="{{route('top-monthly')}}" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Monthly</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+                <a href="{{route('top-yearly')}}" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Years</p>
+                  <p>Yearly</p>
                 </a>
               </li>
             </ul>
