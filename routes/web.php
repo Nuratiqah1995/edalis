@@ -29,4 +29,6 @@ Route::post('/profile-address', 'ProfileController@address')->name('profile.addr
 Route::post('/profile-parent', 'ProfileController@parent')->name('profile.parent');
 Route::resource('/profile', 'ProfileController')->middleware('auth');
 Route::get('/business-info', 'BusinessInfoController@index')->name('business-info.index')->middleware('auth'); //kena coading mcm ni sbb masa comman line untuk make:controller tak letak -r
+Route::post('/business-info', 'BusinessInfoController@info')->name('business-info.info'); //lepas get or resource, semua benda yg di key in akn dimasukkan guna method post ni
+Route::post('/business-address', 'BusinessInfoController@address')->name('business-address.address');
 Route::resource('/sales-info', 'SalesInfoController')->middleware('auth');
