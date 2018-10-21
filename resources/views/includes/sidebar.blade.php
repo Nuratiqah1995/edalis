@@ -17,7 +17,7 @@
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 Dashboard
-                
+
               </p>
             </a>
           </li>
@@ -63,7 +63,7 @@
           </li>
           <li class="nav-header fa fa-edit">  Manage </li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{ route('entrepreneur-info.index') }}" class="nav-link">
               <i class="nav-icon fa fa-users"></i>
               <p>
                 Entrepreneur Profile
@@ -72,7 +72,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{ route('entrepreneur-business.index') }}" class="nav-link">
               <i class="nav-icon fa fa-briefcase"></i>
               <p>
                 Entrepreneur Business
@@ -81,7 +81,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{ route('entrepreneur-sales.index') }}" class="nav-link">
               <i class="nav-icon fa fa-shopping-cart"></i>
               <p>
                 Entrepreneur Sales
@@ -149,8 +149,8 @@
               </p>
             </a>
           </li>
-                 
-          
+
+
           <li class="nav-header">Report</li>
           <li class="nav-item">
             <a href="" class="nav-link">
@@ -164,7 +164,7 @@
               <p>Tables</p>
             </a>
           </li>
-          
+
         </ul>
       </nav>
 @endif

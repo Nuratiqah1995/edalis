@@ -30,3 +30,7 @@ Route::post('/profile-parent', 'ProfileController@parent')->name('profile.parent
 Route::resource('/profile', 'ProfileController')->middleware('auth');
 Route::get('/business-info', 'BusinessInfoController@index')->name('business-info.index')->middleware('auth'); //kena coading mcm ni sbb masa comman line untuk make:controller tak letak -r
 Route::resource('/sales-info', 'SalesInfoController')->middleware('auth');
+
+Route::resource('entrepreneur-info', 'EntrepreneurProfileController')->middleware('auth');
+Route::resource('entrepreneur-business', 'EntrepreneurBusinessController')->middleware('auth');
+Route::resource('entrepreneur-sales', 'EntrepreneurSalesController')->middleware('auth');
