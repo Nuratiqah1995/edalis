@@ -12,8 +12,7 @@ use App\Support\Helper;
             <h1>My Profile</h1>
           </div>
           <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <ol class="breadcrumb float-sm-right"><li class="breadcrumb-item"><a href="{{route('entrepreneur-info.index')}}">Index</a></li>
               <li class="breadcrumb-item active">My Profile</li>
             </ol>
           </div>
@@ -25,7 +24,7 @@ use App\Support\Helper;
       <div class="container-fluid">
         <div class="row">
           <!-- left column -->
-          <div class="col-md-3">
+          <div class="col-md-4">
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
@@ -63,14 +62,14 @@ use App\Support\Helper;
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Update</button>
+                  <!-- <button type="submit" class="btn btn-primary">Update</button> -->
                 </div>
               </form>
             </div>
             <!-- /.card -->
               </div>
 
-              <div class="col-md-3">
+              <div class="col-md-4">
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
@@ -210,14 +209,14 @@ use App\Support\Helper;
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary" style=>Update</button>
+                  <!-- <button type="submit" class="btn btn-primary" >Update</button> -->
                 </div>
               </form>
             </div>
             <!-- /.card -->
               </div>
 
-              <div class="col-md-6">
+              <div class="col-md-4">
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
@@ -267,7 +266,7 @@ use App\Support\Helper;
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Update</button>
+                  <!-- <button type="submit" class="btn btn-primary">Update</button> -->
                 </div>
               </form>
             </div>
@@ -333,7 +332,7 @@ use App\Support\Helper;
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Update</button>
+                  <!-- <button type="submit" class="btn btn-primary">Update</button> -->
                 </div>
               </form>
             </div>
@@ -399,7 +398,7 @@ use App\Support\Helper;
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Update</button>
+                  <!-- <button type="submit" class="btn btn-primary">Update</button> -->
                 </div>
               </form>
             </div>
