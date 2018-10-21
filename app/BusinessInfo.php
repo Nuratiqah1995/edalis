@@ -10,4 +10,9 @@ class BusinessInfo extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function address()
+    {
+        return $this->hasOne(Address::class, 'entity_id')->where('type', 4);
+    }
 }
