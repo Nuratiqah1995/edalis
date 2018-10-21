@@ -16,14 +16,14 @@ class CreateBusinessInfosTable extends Migration
         Schema::create('business_infos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_id')->nullable();
-            $table->string('address_id')->nullable();
+            // $table->string('address_id')->nullable();
             $table->string('company_name')->nullable();
             $table->string('registration_no')->nullable();
             $table->string('company_type')->nullable();
             $table->string('category')->nullable();
             $table->string('business_type')->nullable();
             $table->string('business_field')->nullable();
-            $table->string('capital')->nullable();
+            $table->double('capital',10,2)->nullable();
             $table->timestamps();
         });
     }

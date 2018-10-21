@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\SalesInfo;
 
 class SalesInfoController extends Controller
 {
@@ -12,8 +14,42 @@ class SalesInfoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+   
     {
-        return view('sales_info.edit');
+
+        $user = Auth::user();
+        @$sale = SalesInfo::where('user_id',Auth::user()->id)->first();
+
+        return view('sales_info.edit')->with([
+
+            'sale' => $sale,
+
+        ]);
+
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function sales (Request $request)
+    {
+        $sale = SalesInfo::where('user_id',Auth::user()->id)->where('type',$request->type)->first();
+        // return info;
+
+        if (!$sale){
+            $sale = new SalesInfo();
+        } 
+        
+        $sale->user_id = Auth::user()->id;
+        $sale->type = $request->type;
+        $sale->market_target = $request->market_target;
+        $sale->modal = $request->modal;
+        $sale->sales = $request->sales;
+        $sale->save();
+        return redirect()->back();
     }
 
     /**

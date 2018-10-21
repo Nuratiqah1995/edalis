@@ -198,12 +198,12 @@ use App\Support\Helper;
                     <label for="level_study">Level Of Study</label>
                     <select name="level_study" class="form-control{{ $errors->has('level_study') ? ' is-invalid' : '' }}" required>
                         <option value="" selected>Please Select</option>
-                        <option value="diploma" {{ Helper::setSelect('Diploma', @$profile->level_study) }}>Diploma</option>
-                        <option value="bachelor" {{ Helper::setSelect('Bachelor', @$profile->level_study) }}>Bachelor</option>
-                        <option value="degree" {{ Helper::setSelect('Degree', @$profile->level_study) }}>Degree</option>
-                        <option value="master" {{ Helper::setSelect('Master', @$profile->level_study) }}>Master</option>
-                        <option value="phd" {{ Helper::setSelect('PhD', @$profiles->level_study) }}>PhD</option>
-                    </select>
+                        <option value="Diploma" {{ Helper::setSelect('Diploma', @$profile->level_study) }}>Diploma</option>
+                        <option value="Bachelor" {{ Helper::setSelect('Bachelor', @$profile->level_study) }}>Bachelor</option>
+                        <option value="Degree" {{ Helper::setSelect('Degree', @$profile->level_study) }}>Degree</option>
+                        <option value="Master" {{ Helper::setSelect('Master', @$profile->level_study) }}>Master</option>
+                        <option value="PhD" {{ Helper::setSelect('PhD', @$profile->level_study) }}>PhD</option>                        
+                    </select>                   
                   </div>
                   
                 </div>
@@ -228,12 +228,12 @@ use App\Support\Helper;
               <form role="form" action="{{route('profile.address')}}" method="POST">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="address1">Address 1</label>
-                    <input type="address1" class="form-control" name="address_1" value="{{ @$address->address_1 }}" placeholder="Enter Address 1" required>
+                    <label for="address_1">Address 1</label>
+                    <input type="address_1" class="form-control" name="address_1" value="{{ @$address->address_1 }}" placeholder="Enter Address 1" required>
                   </div>
                   <div class="form-group">
-                    <label for="address2">Address 2</label>
-                    <input type="address2" class="form-control" name="address_2" value="{{ @$address->address_2 }}" placeholder="Enter Address 2" required>
+                    <label for="address_2">Address 2</label>
+                    <input type="address_2" class="form-control" name="address_2" value="{{ @$address->address_2 }}" placeholder="Enter Address 2" required>
                   </div>
                   <div class="form-group">
                     <label for="state">State</label>
@@ -304,7 +304,7 @@ use App\Support\Helper;
                   </div>
                   <div class="form-group">
                     <label for="state">State</label>
-                    <select name="state" class="form-control{{ $errors->has('city') ? ' is-invalid' : '' }}" required>
+                    <select name="state" class="form-control{{ $errors->has('state') ? ' is-invalid' : '' }}" required>
                         <option value="" selected>Please Select</option>
                         <option value="kedah" {{ Helper::setSelect('kedah', @$father->address->state) }}>Kedah</option>
                         <option value="penang" {{ Helper::setSelect('penang', @$father->address->state) }}>Penang</option>

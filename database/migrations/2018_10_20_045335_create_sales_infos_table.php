@@ -16,7 +16,7 @@ class CreateSalesInfosTable extends Migration
         Schema::create('sales_infos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_id')->nullable();
-            $table->integer('type')->default(1)->comment("1. Weeks, 2. Years");
+            $table->string('type')->default(1)->comment("1. Weeks, 2. Months 3. Years");
             $table->integer('market_target');
             $table->double('modal',10,2)->nullable();
             $table->double('sales',10,2)->nullable();

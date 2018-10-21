@@ -34,6 +34,7 @@ class BusinessInfoController extends Controller
     public function info (Request $request)
     {
         $info = BusinessInfo::where('user_id',Auth::user()->id)->first();
+        // return info;
 
         if (!$info){
             $info = new BusinessInfo();
@@ -61,7 +62,7 @@ class BusinessInfoController extends Controller
         $business = BusinessInfo::where('user_id',Auth::user()->id)->first();
         
          
-        
+        // return $business;
         if(!@$business->address)
         {
             $business_address = new Address();
