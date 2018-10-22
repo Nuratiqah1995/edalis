@@ -59,6 +59,7 @@ class EntrepreneurSalesController extends Controller
         return view('entrepreneur_sales.top')->with([
             'sales' => $sales,
         ]);
+
     }
 
     public function topYearly()
