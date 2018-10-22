@@ -16,7 +16,7 @@ class CreateParentInformationsTable extends Migration
         Schema::create('parent_informations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_id')->nullable();
-            $table->string('address_id')->nullable();
+            // $table->string('address_id')->nullable();s
             $table->integer('type')->default(1)->comment("1. Father Name, 2. Mother Name");
             $table->string('name');
             $table->integer('phone_no');
