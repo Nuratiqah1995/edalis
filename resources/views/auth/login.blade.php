@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V1</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="icon" type="image/jpg" href="images/icons/edalisIcon.jpg"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -28,7 +28,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/edalis.png" alt="edalis">
+					<img src="images/edalis.jpg" alt="edalis">
 				</div>
 
 				<form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
@@ -74,10 +74,10 @@
 						</a>
 					</div>
 
-					<div class="text-center p-t-136">
+					<div class="text-center p-t-100">
 						<a class="txt2" href="{{route('register')}}">
-						Create your Account
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						<h6>Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i></h6>
 						</a>
 					</div>
 				</form>

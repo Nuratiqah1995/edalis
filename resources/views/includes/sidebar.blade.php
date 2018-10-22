@@ -1,8 +1,8 @@
  <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/bulb2.png" alt="EDALIS" class="brand-image img-circle elevation-3"
+    <a href="" class="brand-link">
+      <img src="dist/img/bulb2.png" alt="EDALIS" class="brand-image img-circle elevation-8"
            style="opacity: .8">
-      <span class="brand-text font-weight-light" style="bold">EDALIS</span>
+      <span class="brand-text font-weight-bold">&nbsp; &nbsp; EDALIS</span>
     </a>
 
 
@@ -146,15 +146,7 @@
             </a>
            </li>
 
-          <li class="nav-item">
-            <a href="" class="nav-link">
-              <i class="nav-icon fa fa-calculator"></i>
-              <p>
-                Calculator
-                <span class="badge badge-info right"></span>
-              </p>
-            </a>
-          </li>
+         
 
 
           <li class="nav-header">Report</li>

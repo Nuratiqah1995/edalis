@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V1</title>
+	<title>Register</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="icon" type="image/jpg" href="images/icons/edalisIcon.jpg"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -28,7 +28,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/img-01.png" alt="IMG">
+					<img src="images/edalis.jpg" alt="edalis">
 				</div>
 
 				<form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
@@ -102,19 +102,10 @@
 						</button>
 					</div>
 
-					<div class="text-center p-t-12">
-						<span class="txt1">
-							Forgot
-						</span>
-						<a class="txt2" href="#">
-							Password?
-						</a>
-					</div>
-
-					<div class="text-center p-t-136">
+					<div class="text-center p-t-100">
 						<a class="txt2" href="{{route('login')}}">
-							Login
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+							<h6>Login
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i></h6>
 						</a>
 					</div>
 				</form>
