@@ -14,7 +14,11 @@ class EntrepreneurBusinessController extends Controller
      */
     public function index()
     {
-        $businesses = BusinessInfo::paginate(35);
+        if (request()->search) {
+            $businesses = BusinessInfo::where('company_name', 'like', '%' . request()->search . '%')->paginate(35);
+        } else {
+            $businesses = BusinessInfo::paginate(35);
+        }
 
         return view('entrepreneur_business.index')->with([
             'businesses' => $businesses,

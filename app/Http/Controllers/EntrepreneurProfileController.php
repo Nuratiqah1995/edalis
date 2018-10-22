@@ -14,7 +14,11 @@ class EntrepreneurProfileController extends Controller
      */
     public function index()
     {
-        $users = User::where('role', 2)->paginate(35);
+        if (request()->search) {
+            $users = User::where('name', 'like', '%' . request()->search . '%')->where('role', 2)->paginate(35);
+        } else {
+            $users = User::where('role', 2)->paginate(35);
+        }
 
         return view('entrepreneur_profile.index')->with([
             'users' => $users,
