@@ -1,8 +1,8 @@
 <footer class="main-footer">
 <strong><center>Copyright &copy; Entrepreneur Data Library System, UniKL Technoputra.</strong>All rights reserved.</center>
-    
+
 </footer>
-  
+
 
 
 </div>
@@ -30,6 +30,7 @@
 <script src="plugins/knob/jquery.knob.js"></script>
 <!-- daterangepicker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
 <!-- datepicker -->
 <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
