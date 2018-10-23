@@ -43,6 +43,16 @@ class EntrepreneurSalesController extends Controller
         //
     }
 
+    public function reportChart()
+    {
+        return view('entrepreneur_sales.report_chart');
+    }
+
+    public function composeEmail()
+    {
+        return view('index');
+    }
+
     public function topWeekly()
     {
         $sales = SalesInfo::orderBy('sales', 'DESC')

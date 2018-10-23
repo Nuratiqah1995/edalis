@@ -17,11 +17,11 @@
 
 Route::get('/', function () {
     return view('index');
-})->middleware('auth');
+})->name('home')->middleware('auth');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 
 Route::post('/profile-personal', 'ProfileController@personal')->name('profile.personal');
 Route::post('/profile-study', 'ProfileController@study')->name('profile.study');
@@ -39,6 +39,8 @@ Route::resource('entrepreneur-sales', 'EntrepreneurSalesController')->middleware
 Route::get('top-weekly', 'EntrepreneurSalesController@topWeekly')->name('top-weekly')->middleware('auth');
 Route::get('top-monthly', 'EntrepreneurSalesController@topMonthly')->name('top-monthly')->middleware('auth');
 Route::get('top-yearly', 'EntrepreneurSalesController@topYearly')->name('top-yearly')->middleware('auth');
+Route::get('report-chart', 'EntrepreneurSalesController@reportChart')->name('report-chart')->middleware('auth');
+Route::get('compose-email', 'EntrepreneurSalesController@composeEmail')->name('compose-email')->middleware('auth');
 Route::post('/business-info', 'BusinessInfoController@info')->name('business-info.info'); //lepas get or resource, semua benda yg di key in akn dimasukkan guna method post ni
 Route::post('/business-address', 'BusinessInfoController@address')->name('business-address.address');
 Route::resource('/sales-info', 'SalesInfoController')->middleware('auth');

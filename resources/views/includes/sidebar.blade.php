@@ -13,7 +13,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="./index.html" class="nav-link active">
+            <a href="/" class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 Dashboard
@@ -31,19 +31,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('top-weekly')}}" class="nav-link">
+                <a href="{{route('top-weekly')}}" class="nav-link {{ Route::currentRouteName() == 'top-weekly' ? 'active' : '' }}">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Weekly</p>
                 </a>
               </li>
 			  <li class="nav-item">
-                <a href="{{route('top-monthly')}}" class="nav-link">
+                <a href="{{route('top-monthly')}}" class="nav-link {{ Route::currentRouteName() == 'top-monthly' ? 'active' : '' }}">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Monthly</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('top-yearly')}}" class="nav-link">
+                <a href="{{route('top-yearly')}}" class="nav-link {{ Route::currentRouteName() == 'top-yearly' ? 'active' : '' }}">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Yearly</p>
                 </a>
@@ -51,7 +51,7 @@
             </ul>
           </li>
             <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link {{ Route::currentRouteName() == 'compose-email' ? 'active' : '' }}">
               <i class="nav-icon fa fa-envelope-o"></i>
               <p>
                 Mailbox
@@ -60,7 +60,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/mailbox/compose.html" class="nav-link">
+                <a href="{{ route('compose-email') }}" class="nav-link {{ Route::currentRouteName() == 'compose-email' ? 'active' : '' }}">
                   <i class="fa fa-paper-plane nav-icon"></i>
                   <p>Compose</p>
                 </a>
@@ -69,7 +69,7 @@
           </li>
           <li class="nav-header fa fa-edit">  Manage </li>
           <li class="nav-item">
-            <a href="{{ route('entrepreneur-info.index') }}" class="nav-link">
+            <a href="{{ route('entrepreneur-info.index') }}" class="nav-link {{ Route::currentRouteName() == 'entrepreneur-info.index' ? 'active' : '' }}">
               <i class="nav-icon fa fa-users"></i>
               <p>
                 Entrepreneur Profile
@@ -78,7 +78,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('entrepreneur-business.index') }}" class="nav-link">
+            <a href="{{ route('entrepreneur-business.index') }}" class="nav-link {{ Route::currentRouteName() == 'entrepreneur-business.index' ? 'active' : '' }}">
               <i class="nav-icon fa fa-briefcase"></i>
               <p>
                 Entrepreneur Business
@@ -87,7 +87,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('entrepreneur-sales.index') }}" class="nav-link">
+            <a href="{{ route('entrepreneur-sales.index') }}" class="nav-link {{ Route::currentRouteName() == 'entrepreneur-sales.index' ? 'active' : '' }}">
               <i class="nav-icon fa fa-shopping-cart"></i>
               <p>
                 Entrepreneur Sales
@@ -99,7 +99,7 @@
 
           <li class="nav-header fa fa-file">  Report </li>
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="{{ route('report-chart') }}" class="nav-link {{ Route::currentRouteName() == 'report-chart' ? 'active' : '' }}">
               <i class="nav-icon fa fa-pie-chart"></i>
               <p>Chart</p>
             </a>
@@ -121,7 +121,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('profile.index')}}" class="nav-link">
+            <a href="{{route('profile.index')}}" class="nav-link {{ Route::currentRouteName() == 'profile.index' ? 'active' : '' }}">
               <i class="nav-icon fa fa-user"></i>
               <p>
                 My Profile
@@ -129,7 +129,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('business-info.index')}}" class="nav-link">
+            <a href="{{route('business-info.index')}}" class="nav-link {{ Route::currentRouteName() == 'business-info.index' ? 'active' : '' }}">
               <i class="nav-icon fa fa-briefcase"></i>
               <p>
                 Business Info
@@ -138,7 +138,7 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="{{route('sales-info.index')}}" class="nav-link">
+            <a href="{{route('sales-info.index')}}" class="nav-link {{ Route::currentRouteName() == 'sales-info.index' ? 'active' : '' }}">
               <i class="nav-icon fa fa-shopping-cart"></i>
               <p>
                 Sales Info
@@ -146,7 +146,7 @@
             </a>
            </li>
 
-         
+
 
 
           <li class="nav-header">Report</li>
