@@ -45,7 +45,10 @@ class EntrepreneurSalesController extends Controller
 
     public function topWeekly()
     {
-        $sales = SalesInfo::orderBy('sales', 'DESC')->limit(5)->get();
+        $sales = SalesInfo::orderBy('sales', 'DESC')
+            ->where(\DB::raw('YEARWEEK(`created_at`, 1)'), '=', \DB::raw('YEARWEEK(CURDATE(), 1)'))
+            ->limit(5)->get();
+        // dd($sales);
 
         return view('entrepreneur_sales.top')->with([
             'sales' => $sales,
@@ -54,7 +57,9 @@ class EntrepreneurSalesController extends Controller
 
     public function topMonthly()
     {
-        $sales = SalesInfo::orderBy('sales', 'DESC')->limit(5)->get();
+        $sales = SalesInfo::orderBy('sales', 'DESC')
+            ->where(\DB::raw('MONTH(created_at)'), '=', date('n'))
+            ->limit(5)->get();
 
         return view('entrepreneur_sales.top')->with([
             'sales' => $sales,
@@ -64,7 +69,9 @@ class EntrepreneurSalesController extends Controller
 
     public function topYearly()
     {
-        $sales = SalesInfo::orderBy('sales', 'DESC')->limit(5)->get();
+        $sales = SalesInfo::orderBy('sales', 'DESC')
+            ->where(\DB::raw('YEAR(created_at)'), '=', date('Y'))
+            ->limit(5)->get();
 
         return view('entrepreneur_sales.top')->with([
             'sales' => $sales,
