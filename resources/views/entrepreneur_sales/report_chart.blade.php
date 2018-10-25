@@ -58,12 +58,7 @@ Highcharts.chart('pie', {
     series: [{
         name: 'Brands',
         colorByPoint: true,
-        data: [
-			{
-				"name" : "test",
-				y : 31
-			}
-	]
+        data: {!! $data1 !!}
     }]
 });
 </script>

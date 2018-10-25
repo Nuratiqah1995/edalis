@@ -33,7 +33,7 @@ class EntrepreneurSalesController extends Controller
         //     ->join('profiles', 'profiles.user_id', '=', 'users.id')
         //     ->groupBy('profiles.campus')
         $data1 = DB::table('users')
-            ->select('profiles.campus', DB::raw('COUNT(profiles.campus) as counter'))
+            ->select('profiles.campus as name', DB::raw('COUNT(profiles.campus) as y'))
             ->join('profiles', 'profiles.user_id', '=', 'users.id')
             ->groupBy('campus')
             ->get();
