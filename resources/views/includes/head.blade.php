@@ -4,7 +4,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-  @if( Route::currentRouteName() == 'entrepreneur-info.show' || 
+  @if( Route::currentRouteName() == 'entrepreneur-info.show' ||
   Route::currentRouteName() == 'entrepreneur-business.show' ||
   Route::currentRouteName() == 'entrepreneur-sales.show'
   )
@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker-bs3.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <!-- <script src="../jquery.min.js"></script> -->
   <!-- Google Font: Source Sans Pro -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> -->
 @else
@@ -47,4 +48,5 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <!-- <script src="jquery.min.js"></script> -->
 @endif

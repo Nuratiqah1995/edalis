@@ -58,24 +58,12 @@ Highcharts.chart('pie', {
     series: [{
         name: 'Brands',
         colorByPoint: true,
-        data: [{
-            name: 'MIIT',
-            y: 61.41,
-            sliced: true,
-            selected: true
-        }, {
-            name: 'MIAT',
-            y: 11.84
-        }, {
-            name: 'MIMET',
-            y: 10.85
-        }, {
-            name: 'UBIS',
-            y: 4.67
-        }, {
-            name: 'BMI',
-            y: 4.18
-        }]
+        data: [
+			{
+				"name" : "test",
+				y : 31
+			}
+	]
     }]
 });
 </script>

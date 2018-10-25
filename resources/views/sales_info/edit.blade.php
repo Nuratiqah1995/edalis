@@ -1,7 +1,7 @@
 @include('includes.upper')
 <?php
 use App\Support\Helper;
- ?>
+?>
 
  <div class="content-wrapper">
 
@@ -22,7 +22,7 @@ use App\Support\Helper;
       </div><!-- /.container-fluid -->
     </section>
      <!-- Main content -->
-     
+
     <section class="content">
       <div class="container-fluid">
         <div class="row">
@@ -34,7 +34,7 @@ use App\Support\Helper;
                 <h3 class="card-title">Sales</h3>
               </div>
               <!-- /.card-header -->
-              <!-- form start --> 
+              <!-- form start -->
               <form role="form" action="{{route('sales-info.sales')}}" method="POST"  >
                 <div class="card-body">
                 <div class="form-group">
@@ -43,7 +43,7 @@ use App\Support\Helper;
                         <option value="" selected>Please Select</option>
                         <option value="Weeks" {{ Helper::setSelect('Weeks', @$sale->type) }} >Week</option>
                         <option value="Months" {{ Helper::setSelect('Months', @$sale->type) }} >Month</option>
-                        <option value="Years" {{ Helper::setSelect('Years', @$sale->type) }} >Month</option>
+                        <option value="Years" {{ Helper::setSelect('Years', @$sale->type) }} >Years</option>
                     </select>
                   </div>
                 <div class="form-group">
@@ -57,7 +57,7 @@ use App\Support\Helper;
                   <div class="form-group">
                     <label for="sales">Sales</label>
                     <input type="sales" class="form-control" name="sales" value="{{ @$sale->sales }}"  placeholder="Enter Sales" required>
-                  </div>         
+                  </div>
               </div>
                 <!-- /.card-body -->
 
@@ -67,11 +67,11 @@ use App\Support\Helper;
               </form>
             </div>
             <!-- /.card -->
-          </div>  
+          </div>
         </div>
       </div>
  </section>
-    
+
 </div>
 
 
